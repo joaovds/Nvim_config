@@ -8,8 +8,9 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'ryanoasis/vim-devicons'
+
 " tools
-Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'jiangmiao/auto-pairs'
@@ -22,6 +23,16 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'w0rp/ale'
 
 call plug#end()
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ ]
 
 " Status bar plugin (vim-airline)
 let g:airline_left_sep = ''
