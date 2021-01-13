@@ -16,6 +16,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'xuyuanp/nerdtree-git-plugin'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
