@@ -111,6 +111,15 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote'
 
+" ========== Configurar Emmet.vim para tsx (jsx) ==========
+
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+autocmd FileType html,css,javascript.jsx EmmetInstall
+
 " ========== Scrolling ==========
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
@@ -131,4 +140,3 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
