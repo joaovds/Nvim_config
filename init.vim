@@ -21,6 +21,7 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lilydjwg/colorizer'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -28,6 +29,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
+
+Plug 'othree/yajs.vim'
 
 call plug#end()
 
