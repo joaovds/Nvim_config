@@ -2,7 +2,7 @@ syntax on
 filetype plugin on
 
 " ========== Plugins ==========
- 
+
 call plug#begin()
 " style
 Plug 'vim-airline/vim-airline'
@@ -26,7 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Syntax format for jsx
 Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 
 call plug#end()
@@ -47,9 +47,9 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
-  \ 'coc-json', 
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
   \ ]
 set cmdheight=2
 set updatetime=300
@@ -82,6 +82,30 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" ========== Configurar ALE ==========
+
+let g:jsx_ext_required = 0
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote'
 
 " ========== Scrolling ==========
 
