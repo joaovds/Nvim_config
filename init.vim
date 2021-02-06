@@ -134,7 +134,7 @@ map <F5> :e!<CR>
 map <leader>W :w<CR>
 
 "nmap <ESC> :call coc#util#float_hide() <CR>
-nmap <silent> k :call CocAction('doHover')<CR>
+nmap <silent> z :call CocAction('doHover')<CR>
 "autocmd CursorHold * silent call CocActionAsync('doHover')
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
